@@ -21,7 +21,7 @@ type (
 func (p *HTTPStatusParams) Validate(_ *uiConfigModels.ConfigVersion) *uiConfigModels.ConfigError {
 	// TODO
 
-	if !isValid(p.URL, p) {
+	if !validateStatusCode(p.URL, p) {
 		return &uiConfigModels.ConfigError{}
 	}
 
